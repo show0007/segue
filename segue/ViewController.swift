@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var jumpSwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func changeViewController(_ sender: UIButton) {
+        if jumpSwitch.isOn{
+            self.performSegue(withIdentifier: "jumpSegue", sender: self)
+        }
+        
+    }
+    
 }
 
